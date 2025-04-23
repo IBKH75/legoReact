@@ -1,7 +1,10 @@
 import Card from "./Card";
 import "./list.css";
+import products from "./data/product";
+console.log(products)
 
-function List() {
+
+/*function List() {
   return (
     <div className="product-list">
       <Card 
@@ -25,4 +28,60 @@ function List() {
   );
 }
 
+export default List;*/
+
+
+
+
+/*
+
+function List() {
+  return (
+    <div className="product-list">
+      {products.map((product, index) => (
+        <Card
+          key={index}
+          name={product.name}
+          tag={product.tag}
+          price={product.price}
+          available={product.available}
+          imageSrc={product.imageSrc}
+        />
+      ))}
+    </div>
+  );
+}
+
 export default List;
+*/
+
+
+
+
+function List() {
+  return (
+    <div className="product-list">
+      {products.map(
+        (product, index) => (
+          product.available && (
+          <Card
+            key={index}
+            name={product.name}
+            tag={product.tag}
+            price={product.price}
+            available={product.available}
+            imageSrc={product.imageSrc}
+          />
+        )
+        )
+      )}
+    </div>
+  );
+}
+
+export default List;
+
+
+
+
+
