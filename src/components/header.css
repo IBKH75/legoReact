@@ -1,3 +1,7 @@
 header {
   background: white;
 }
+
+.NameContainer{
+  display:flex;
+}
