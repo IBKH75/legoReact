@@ -7,14 +7,24 @@ import React, { useState } from 'react';
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [count, setCount,] = useState(0);
+  const [articles, setArticles]=useState([]);
+
   return (
     <>
     
       <Header />
       <div className="NameContainer">
-      <List count={count} onUpdateCount={setCount}/>
-      <Basket count={count}/>
+      <List 
+      count={count} 
+      onUpdateCount={setCount}
+      articles={articles}
+      onUpdateArticles={setArticles}
+      />
+      <Basket
+       count={count}
+       articles ={articles}
+      />
       </div>
       <Footer />
     </>

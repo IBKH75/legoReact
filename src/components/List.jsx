@@ -1,12 +1,12 @@
 import Card from "./Card";
 import "./list.css";
 import products from "./data/product";
-console.log(products)
 
 
 
 
-function List({count, onUpdateCount}) {
+
+function List({count, onUpdateCount,articles,onUpdateArticles}) {
   return (
     <div className="product-list">
       {products.map(
@@ -21,6 +21,8 @@ function List({count, onUpdateCount}) {
             imageSrc={product.imageSrc}
             count={count}
             onUpdateCount={onUpdateCount}
+            articles ={articles}
+            onUpdateArticles={onUpdateArticles}
           />
         )
         )

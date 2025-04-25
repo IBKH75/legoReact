@@ -3,9 +3,20 @@ import "./card.css";
 
 
 
-function Card({ name, tag, price, imageSrc, available,count,onUpdateCount }) {
+function Card({ name,
+  tag,
+  price,
+  imageSrc,
+  available,
+  count,
+  onUpdateCount,
+  articles,
+  onUpdateArticles 
+})
+   {
   const handleClick = () => {
      onUpdateCount(count + price);
+     onUpdateArticles([...articles,name]);
     
  
     
